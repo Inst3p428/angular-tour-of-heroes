@@ -47,3 +47,16 @@ a {
 a:hover {
   background-color: #000;
 }
+
+.chart-panel {
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+.chart-panel h3 {
+  text-align: center;
+}
+
+.chart-container {
+  height: 360px;
+}
