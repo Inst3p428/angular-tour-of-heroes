@@ -38,7 +38,7 @@ export class Dashboard {
 
   getHeroes () {
     this.heroService.getHeroes().subscribe(x => {
-      this.heroes = x.slice(1,5);
+      this.heroes = x.slice(1,8);
       this.renderHeroPowerChart();
       this.cdr.detectChanges();
     }); 
@@ -49,16 +49,16 @@ export class Dashboard {
       return;
     }
 
-    const powerLevels = [95, 88, 76, 91];
+    //const powerLevels = [95, 88, 76, 91];
     //Chartconfiguration determines type of chart displayed 
     const config: ChartConfiguration<'bar'> = {
       type: 'bar',
       data: {
-        labels: this.heroes.map(hero => hero.name),
+        labels: this.heroes.map(hero => hero.name),  
         datasets: [
           {
             label: 'Power Level',
-            data: powerLevels.slice(0, this.heroes.length),
+            data: this.heroes.map(hero => hero.power),
             backgroundColor: [
               'rgba(63, 82, 92, 0.72)',
               'rgba(25, 118, 210, 0.72)',
