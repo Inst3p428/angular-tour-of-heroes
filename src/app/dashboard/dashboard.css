@@ -48,6 +48,21 @@ a:hover {
   background-color: #000;
 }
 
+/* White background for chart */
+.dashboard-chart {
+  top: 443px;
+  left: 412px;
+  width: 720px;
+  height: 368px;
+  /* UI Properties */
+  background: transparent linear-gradient(117deg, #F2F2F21A 0%, #F2F2F299 100%) 0% 0% no-repeat padding-box;
+  border: 1px solid #EFEFEF;
+  border-radius: 15px;
+  opacity: 1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 .chart-panel {
   max-width: 800px;
   margin: 2rem auto 0;
